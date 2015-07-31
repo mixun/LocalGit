@@ -4,7 +4,8 @@
 #
 # $Id$
 # -----------------------------------------------------------------------------
-
+#========
+==========#
 # Make sure prerequisite environment variables are set
 if [ -z "$JAVA_HOME" ]; then
   echo "The JAVA_HOME environment variable is not defined"
