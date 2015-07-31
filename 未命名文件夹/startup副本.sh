@@ -4,6 +4,7 @@
 #
 # $Id$
 # -----------------------------------------------------------------------------
+#==========
 
 # Make sure prerequisite environment variables are set
 if [ -z "$JAVA_HOME" ]; then
