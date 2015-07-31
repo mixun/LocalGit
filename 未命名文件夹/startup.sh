@@ -27,14 +27,14 @@ if [ -z $GEOSERVER_HOME ]; then
      echo "directory.  If not set then running this script from other "
      echo "directories will not work in the future."
      export GEOSERVER_HOME=`pwd`
-  else 
+  else
     if [ -r ../start.jar ]; then
       echo "GEOSERVER_HOME environment variable not found, using current "
       echo "location.  If not set then running this script from other "
       echo "directories will not work in the future."
       export GEOSERVER_HOME=`pwd`/..
     fi
-  fi 
+  fi
 
   if [ -z "$GEOSERVER_HOME" ]; then
     echo "The GEOSERVER_HOME environment variable is not defined"
@@ -44,6 +44,8 @@ if [ -z $GEOSERVER_HOME ]; then
   fi
 
 fi
+
+
 
 if [ ! -r "$GEOSERVER_HOME"/bin/startup.sh ]; then
   echo "The GEOSERVER_HOME environment variable is not defined correctly"
@@ -64,11 +66,11 @@ fi
 # if not told otherwise pump up the permgen
 if [ -z "$JAVA_OPTS" ]; then
   export JAVA_OPTS="-XX:MaxPermSize=128m"
-fi 
+fi
 
 cd "$GEOSERVER_HOME"
 
 echo "GEOSERVER DATA DIR is $GEOSERVER_DATA_DIR"
 #added headless to true by default, if this messes anyone up let the list
 #know and we can change it back, but it seems like it won't hurt -ch
-exec "$_RUNJAVA" $JAVA_OPTS -DGEOSERVER_DATA_DIR="$GEOSERVER_DATA_DIR" -Djava.awt.headless=true -DSTOP.PORT=8079 -DSTOP.KEY=geoserver -jar start.jar 
+exec "$_RUNJAVA" $JAVA_OPTS -DGEOSERVER_DATA_DIR="$GEOSERVER_DATA_DIR" -Djava.awt.headless=true -DSTOP.PORT=8079 -DSTOP.KEY=geoserver -jar start.jar
