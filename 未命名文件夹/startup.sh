@@ -6,6 +6,9 @@
 # -----------------------------------------------------------------------------
 #========
 ==========#
+###########
+###############
+
 # Make sure prerequisite environment variables are set
 if [ -z "$JAVA_HOME" ]; then
   echo "The JAVA_HOME environment variable is not defined"
@@ -45,8 +48,6 @@ if [ -z $GEOSERVER_HOME ]; then
   fi
 
 fi
-
-
 
 if [ ! -r "$GEOSERVER_HOME"/bin/startup.sh ]; then
   echo "The GEOSERVER_HOME environment variable is not defined correctly"
