@@ -9,6 +9,8 @@
 ###########
 ###############
 
+
+123
 # Make sure prerequisite environment variables are set
 if [ -z "$JAVA_HOME" ]; then
   echo "The JAVA_HOME environment variable is not defined"
@@ -54,6 +56,8 @@ if [ ! -r "$GEOSERVER_HOME"/bin/startup.sh ]; then
   echo "This environment variable is needed to run this program"
   exit 1
 fi
+
+dd
 
 #Find the configuration directory: GEOSERVER_DATA_DIR
 if [ -z $GEOSERVER_DATA_DIR ]; then
